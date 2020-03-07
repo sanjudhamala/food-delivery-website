@@ -1,0 +1,54 @@
+/* Step 1: Use asterisk selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Step 2: Use html tag selector to set fonts (family/color/size/weight) and background */
+html {
+  background: #fff;
+  color: #555;
+
+  /* If Lato and Arial is not present, any sans-serif will be used */
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+
+  /* font size must be between 15px 25px */
+  font-size: 20px;
+
+  /* Browser's rendering engine decides how to render text over speed, legitibility and so on */
+  /*  text-rendering: optimizeLegibility;  perfectly renders the text*/
+  text-rendering: optimizeLegibility;
+}
+
+.row {
+  /* Step 3: Set the max-width for the content. Content will be in a row container*/
+  /* Step 4: Center the content */
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  /* using two background imgs at the same time with linear-gradient */
+  /* linear-gradient is used to make the image black-transparent and show the text clearly */
+  background-image: linear-gradient(#000000b3, #000000b3), url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  /* height is 100% of viewport, vh stands for viewport height*/
+  height: 100vh;
+}
+
+h1 {
+  margin: 0;
+}
+
+.hero-text-box {
+  /* Making hero-text-box positioned absolutely (doesn't change no matter what) */
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  /* 1st is width and 2nd is height */
+  transform: translate(-50%, -50%);
+}

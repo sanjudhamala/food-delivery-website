@@ -1,4 +1,12 @@
 /* Step 1: Use asterisk selector */
+/* ------------------------------------------------------- */
+/* BASIC SETUP */
+/* ------------------------------------------------------- */
+
+/* 
+color: #e67e22
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +32,9 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+/* ------------------------------------------------------- */
+/* REUSABLE COMPONENETS */
+/* ------------------------------------------------------- */
 .row {
   /* Step 3: Set the max-width for the content. Content will be in a row container*/
   /* Step 4: Center the content */
@@ -31,16 +42,7 @@ html {
   margin: 0 auto;
 }
 
-header {
-  /* using two background imgs at the same time with linear-gradient */
-  /* linear-gradient is used to make the image black-transparent and show the text clearly */
-  background-image: linear-gradient(#000000b3, #000000b3), url(img/hero.jpg);
-  background-size: cover;
-  background-position: center;
-  /* height is 100% of viewport, vh stands for viewport height*/
-  height: 100vh;
-}
-
+/* HEADINGS */
 h1 {
   margin: 0;
   color: #fff;
@@ -53,16 +55,9 @@ h1 {
   margin-bottom: 20px;
 }
 
-.hero-text-box {
-  /* Making hero-text-box positioned absolutely (doesn't change no matter what) */
-  position: absolute;
-  width: 1140px;
-  top: 50%;
-  left: 50%;
-  /* 1st arg is width and 2nd arg is height */
-  /* Animations Prop 1: transform */
-  transform: translate(-50%, -50%);
-}
+/* ------------------------------------------------------- */
+/* BUTTONS */
+/* ------------------------------------------------------- */
 
 .btn:link,
 .btn:visited {
@@ -122,3 +117,63 @@ h1 {
 3. hover
 4. link
  */
+
+/* ------------------------------------------------------- */
+/* HEADER */
+/* ------------------------------------------------------- */
+
+header {
+  /* using two background imgs at the same time with linear-gradient */
+  /* linear-gradient is used to make the image black-transparent and show the text clearly */
+  background-image: linear-gradient(#000000b3, #000000b3), url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  /* height is 100% of viewport, vh stands for viewport height*/
+  height: 100vh;
+}
+
+.hero-text-box {
+  /* Making hero-text-box positioned absolutely (doesn't change no matter what) */
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  /* 1st arg is width and 2nd arg is height */
+  /* Animations Prop 1: transform */
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a {
+  padding: 8px 0;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  /* divide by root font 18px/20px = 0.9 = 90% */
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+a:active {
+  /* text-decoration: underline; */
+  border-bottom: 2px solid #e67e22;
+}

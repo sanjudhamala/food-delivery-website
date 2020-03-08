@@ -15,6 +15,8 @@ html {
   font-weight: 300;
 
   /* font size must be between 15px 25px */
+  /* the root font-size may be in fixed unit like pixels but children font size must be in relative units */
+  /* if you want to change any other font, you must change the root font which will automatically change other fonts */
   font-size: 20px;
 
   /* Browser's rendering engine decides how to render text over speed, legitibility and so on */
@@ -41,6 +43,14 @@ header {
 
 h1 {
   margin: 0;
+  color: #fff;
+  font-size: 200%;
+  text-transform: uppercase;
+  /* if very big heading, then decrease the font-weight */
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  margin-bottom: 20px;
 }
 
 .hero-text-box {
@@ -49,6 +59,66 @@ h1 {
   width: 1140px;
   top: 50%;
   left: 50%;
-  /* 1st is width and 2nd is height */
+  /* 1st arg is width and 2nd arg is height */
+  /* Animations Prop 1: transform */
   transform: translate(-50%, -50%);
 }
+
+.btn:link,
+.btn:visited {
+  /* Two types of elements: 
+  inline (in the same line, can not set width and height, width & height is as much as the content),
+  block (occupies full width of the parent container and forces new line)
+  
+  If you want to place the element in the same line but be able to change width and height then make it inline-block
+  inline-block (in the same line, width and height can be changed)
+  */
+  display: inline-block;
+  /* padding can be in fixed units but fonts must be in relative unit */
+  padding: 10px 30px;
+  font-weight: 300;
+  /* removing udnerline from links */
+  text-decoration: none;
+  border-radius: 200px;
+  /* remove the default blue links */
+
+  /* Animation Prop 2: transition */
+  transition: background 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn:hover,
+.btn:active {
+  background: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid #cf6d17;
+  color: #fff;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #cf6d17;
+  color: #fff;
+}
+
+/* Button/link states:
+1. visited
+2. active
+3. hover
+4. link
+ */

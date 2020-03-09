@@ -9,6 +9,7 @@ Website will respond to/work well any device of any screen size.
 
 What I learnt:
 
+1. Header Section:
 Part One: Working with header section - hero image and text
 1. New HTML Elements: header, nav, ul and li
    1. Create a header and put hero image. Adjust viewport height to 100vh.
@@ -32,3 +33,10 @@ Part Two: Working with header section - hero buttons
    4. hover - hovered over
 3. CSS transitions for small animations
    1. transition - background 0.2s,...........
+
+
+2. Features Section:
+Part One: 
+1. How to put content on website directly from CSS with the :after pseudo class
+2. Using full grid for the first time
+3. Using icons

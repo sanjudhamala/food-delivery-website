@@ -96,6 +96,10 @@ h3 {
 
 /* -----------------PARA --------------------------------- */
 
+/* .section-features {
+  height: 100vh;
+} */
+
 /* line-height should be b/w 120-145% */
 /* whenever you want to center element with margin, you need to reduce the width and calculate the margin */
 .long-copy {
@@ -104,6 +108,10 @@ h3 {
   /* margin: 0 auto; */
   margin-left: 15%;
   /* text-align: center; */
+}
+
+.section-features .long-copy {
+  margin-bottom: 30px;
 }
 
 /* --------------------COLUMNS--------------------------- */
@@ -124,6 +132,52 @@ h3 {
   font-size: 350%;
   color: #e67e22;
   margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------- */
+/* FAVORITE MEALS SECTION */
+/* ------------------------------------------------------- */
+
+.section-meals {
+  padding: 0;
+}
+
+/* 100% of its parent which is browser width */
+.meals-showcase {
+  list-style: none;
+  width: 100%;
+  /* margin: 0; */
+}
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+/* parent is meals-showcase li which is 25% of .meals-showcase 100% width which again is browser's 100% width */
+.meals-photo {
+  width: 100%;
+  margin: 0;
+  /* customize the children's overflow behavior */
+  overflow: hidden;
+  background: #000;
+}
+
+.meals-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  /* transition is a period of time taken to transform from one style to another */
+  /* tranform applies 2d/3d animations */
+  /* transform: scale(1.15) makes the image overflow the container*/
+  transform: scale(1.15);
+  transition: transform 0.5s opacity 0.5s;
+}
+
+.meals-photo img:hover {
+  opacity: 1;
+  transform: scale(1.03);
 }
 
 /* ------------------------------------------------------- */

@@ -40,3 +40,15 @@ Part One:
 1. How to put content on website directly from CSS with the :after pseudo class
 2. Using full grid for the first time
 3. Using icons
+
+Part Two:
+1. Styling icons
+2. Styling horizontal line (border bottom not hr)
+
+
+3. Favorite Meals Section:
+Part One:
+1. Making grid of beautiful images
+2. Zoom in transition with CSS
+3. Make img elements darker
+
